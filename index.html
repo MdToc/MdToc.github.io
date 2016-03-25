@@ -1,1 +1,17 @@
-Hello world !
+<!DOCTYPE html>
+<html ng-app="mdToc">
+  <head>
+    <link rel="stylesheet" type="text/css" href="./bower_components/material-design-lite/material.min.css" />
+    <script type="text/javascript" src="./bower_components/angular/angular.min.js" defer></script>
+    <script type="text/javascript" src="./js/app.js" defer></script>
+  </head>
+
+  <body ng-controller="MdTocController as MdToc">
+    <!--  Store Header  -->
+    <header>
+      <h1>Hello world !</h1>
+      <h2>{{MdToc.projectName}}</h2>
+    </header>
+
+  </body>
+</html>
