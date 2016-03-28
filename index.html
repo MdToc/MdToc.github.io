@@ -1,17 +1,58 @@
 <!DOCTYPE html>
 <html ng-app="mdToc">
   <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="./bower_components/material-design-lite/material.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script type="text/javascript" src="./bower_components/angular/angular.min.js" defer></script>
     <script type="text/javascript" src="./js/app.js" defer></script>
+    <script src="./bower_components/material-design-lite/material.min.js"></script>
   </head>
 
   <body ng-controller="MdTocController as MdToc">
-    <!--  Store Header  -->
-    <header>
-      <h1>Hello world !</h1>
-      <h2>{{MdToc.projectName}}</h2>
-    </header>
-
+    <div class="mdl-layout">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">{{MdToc.projectName}}</span>
+        </div>
+      </header>
+      <br />
+      <main class="mdl-layout__content mdl-grid">
+            <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+            <div class="mdl-cell mdl-cell--10-col mdl-card mdl-shadow--4dp">
+                <div class="mdl-card__supporting-text mdtoc-layout">
+                    <div class="mdtoc-column">
+                        <div class="mdtoc-actions">
+                            <button class="mdl-button mdl-js-button mdl-button--icon">
+                                <i class="material-icons">arrow_forward</i>
+                            </button>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield full-width">
+                            <textarea class="mdl-textfield__input" type="text" rows= "2" id="sample5" ></textarea>
+                            <label class="mdl-textfield__label" for="sample5">Markdown input</label>
+                        </div>
+                    </div>
+                    <div class="mdtoc-separator"></div>
+                    <div class="mdtoc-column">
+                        <div class="mdtoc-actions">
+                            <button class="mdl-button mdl-js-button mdl-button--icon">
+                                <i class="material-icons">content_copy</i>
+                            </button>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield full-width">
+                            <textarea class="mdl-textfield__input" type="text" rows= "2" id="sample5" ></textarea>
+                            <label class="mdl-textfield__label" for="sample5">Output TOC</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdl-card__actions mdl-card--border mdl-center">
+                    <a ng-click="MdToc.process()" class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                        Run
+                    </a>
+                </div>
+            </div>
+      </main>
+    </div>
   </body>
 </html>
