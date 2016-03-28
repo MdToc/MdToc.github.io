@@ -19,7 +19,7 @@ angular.module('mdToc').factory('MdTocUtils', function(){
   }
 
   mdTocUtils.generateToc = function(mdRawText){
-    return generateTocFromTitles(getTitles(mdRawText));
+    return mdTocUtils.generateTocFromTitles(mdTocUtils.getTitles(mdRawText));
   }
 
   return mdTocUtils;
