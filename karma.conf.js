@@ -3,6 +3,23 @@
 
 module.exports = function(config) {
   config.set({
+    reporters: ['progress', 'html'],
+
+    // the default configuration
+    htmlReporter: {
+      outputDir: 'test/reports', // where to put the reports
+      templatePath: null, // set if you moved jasmine_template.html
+      focusOnFailures: true, // reports show failures on start
+      namedFiles: false, // name files instead of creating sub-directories
+      pageTitle: null, // page title for reports; browser info by default
+      urlFriendlyName: false, // simply replaces spaces with _ for files/dirs
+      reportName: 'karma-html', // report summary filename; browser info by default
+
+
+      // experimental
+      preserveDescribeNesting: false, // folded suites stay folded
+      foldAll: false, // reports start folded (only with preserveDescribeNesting)
+    },
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
