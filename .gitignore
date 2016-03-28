@@ -1,1 +1,5 @@
+node_modules
 
+!node_modules/material-design-lite/material.min.css
+!node_modules/material-design-lite/material.min.jss
+!node_modules/angular/angular.min.js
