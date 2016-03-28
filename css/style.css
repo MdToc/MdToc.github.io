@@ -1,47 +1,15 @@
-.small-label {
-    font-size: 14px;
-}
-
 .full-width {
     width: 100%;
 }
 
 .mdl-layout__content {
     margin: initial;
+    height: 100%;
 }
 .mdl-textfield__label {
     font-size: 28px;
 }
-.mdtoc-separator {
-    position: absolute;
-    width: 1px;
-    height: calc(100% - 53px - 16px - 16px);
-    background-color: #DDD;
-}
-.mdtoc-layout {
-    display: flex;
-    width: calc(100% - 32px);
-}
-.mdtoc-column {
-    width: calc(50% - 44px);
-    margin: 0 22px;
-}
-.mdtoc-actions {
-    float: right;
-}
 
-.mdl-center {
-    text-align: center;
-}
-
-@media (max-width: 840px) {
-    .mdtoc-layout {
-        flex-direction: column;
-    }
-    .mdtoc-column {
-        width: 90%;
-    }
-    .mdtoc-separator {
-        display: none;
-    }
+.mdl-card {
+    transition: all 0.3s ease-in-out;
 }
